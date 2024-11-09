@@ -4,7 +4,9 @@ package com.victor.devTest.Model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+@ToString
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -28,6 +30,4 @@ public class Option {
     {
         this.id = id;
     }
-
-
 }

@@ -17,8 +17,11 @@ public class PollService {
         return polls;
     }
 
-    public Poll createPoll(String name, Option[] options){
+    public Poll createPoll(String name, List<Option> options){
         int newPollId = polls.size() + 1;
+        for (int i = 0; i < options.size(); i++) {
+            options.get(i).setId(i + 1);
+        }
         Poll newPoll = new Poll(newPollId,name,options);
         polls.add(newPoll);
         return newPoll;

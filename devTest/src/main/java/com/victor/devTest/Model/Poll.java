@@ -12,15 +12,15 @@ public class Poll {
 
     private int id;
     private String name;
-    private Option[] options;
+    private List<Option> options;
 
-    public Poll(int id, String name,Option[] options){
+    public Poll(int id, String name,List<Option> options){
         this.id = id;
         this.name = name;
         this.options = options;
     }
 
-    public Poll(String name, Option[] options){
+    public Poll(String name, List<Option> options){
         this.name = name;
         this.options = options;
     }
@@ -33,7 +33,7 @@ public class Poll {
         this.id = newId;
     }
 
-    public Option[] getOptions() {
+    public List<Option> getOptions() {
         return options;
     }
 }
